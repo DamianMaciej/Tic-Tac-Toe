@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --squareBlue: #6e728d;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #b6bce7;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.playersDiv {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.player {
+    text-align: end;
+    border: none;
+    padding-right: 10px;
+}
+
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 26px;
+    padding: 2px 5px 0 5px;
+    border: black solid 1px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.sign {
+    font-weight: 600;
+}
+
+.xSign {
+    color: #666666;
+    cursor: default;
+}
+
+.oSign {
+    cursor: default;
+}
+
+.nowPlaying {
+    border: 2px solid #17b6ff;
+    box-shadow: 0 5px rgb(216, 216, 216);
+}
+
+#gameInfo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 15px;
+}
+
+.gameBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 90vw;
+    height: 270px;
+}
+
+.game {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 80px);
+    margin: 20px 0 20px;
+    font-size: 70px;
+    color: rgb(202, 202, 202);
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    height: 80px;
+    width: 80px;
+}
+
+
+.sq3,
+.sq5 {
+    border-top: 7px var(--squareBlue) solid;
+    border-bottom: 7px var(--squareBlue) solid;
+}
+
+.sq1,
+.sq7 {
+    border-left: 7px var(--squareBlue) solid;
+    border-right: 7px var(--squareBlue) solid;
+}
+
+.sq4 {
+    border: 7px var(--squareBlue) solid;
+}
+
+
+#newGame {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: none;
+    background-color: #fff;
+    color: #515780;
+    background-color: #b6bce7;
+    font-weight: 600;
+}
+
+#newGame:hover {
+    cursor: pointer;
+    scale: 105%;
+}
+
+.square:hover {
+    background-color: #a5acd1;
+}
+
+@media screen and (max-width: 600px),
+(max-height: 600px) {
+
+    .gameBoard {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        width: 60vw;
+    }
+
+    .playersDiv .label:first-child {
+        margin-right: 10px;
+    }
+
+    .label {
+        width: 150px;
+
+        display: flex;
+        justify-content: space-between;
+        height: 26px;
+        padding: 2px 5px 0 5px;
+        border: black solid 1px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+}
