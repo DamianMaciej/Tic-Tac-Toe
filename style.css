@@ -177,7 +177,6 @@ body {
     .playersDiv {
         display: block;
         grid-area: leftTop;
-        left: 25%;
         justify-self: center;
         align-self: end;
     }
@@ -185,16 +184,14 @@ body {
     #gameInfo {
         position: relative;
         grid-area: leftMid;
-        left: 25%;
-        justify-self: center;
+        justify-self: start;
         align-self: center;
     }
     
     #newGame {
         position: relative;
         grid-area: leftBott;
-        left: 22%;
-        justify-self: center;
+        justify-self: start;
         align-self: start;
     }
 }
