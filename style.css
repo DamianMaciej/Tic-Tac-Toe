@@ -152,7 +152,7 @@ body {
     }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (orientation: landscape) {
 
     .wrapper {
         display: grid;
